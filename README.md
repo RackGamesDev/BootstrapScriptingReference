@@ -1,7 +1,8 @@
 # Scripting Reference Bootstrap
-Ejemplos básicos de Bootstrap en español´
+Ejemplos básicos de Bootstrap en español
 
 ## Instrucciones
+Instalar en un proyecto de Vite como se indica en funcionamiento.sh o incrustar las etiquetas en el html
 
 ## Cheatshet
 

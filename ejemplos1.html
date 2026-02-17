@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Incluir Bootstrap en una version concreta-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--Aunque no se usen las clases de Bootstrap, ya esta aplicando ciertos estilos por defecto-->
+    <link rel="stylesheet" href="./extra.css" >
+</head>
+<body>
+    <!--Bootstrap funciona de tal manera que se escribe el minimo css posible para en su lugar usar clases de utilidad-->
+    <!--Aunque todo lo que no este soportado por las clases que vienen con Bootstrap si hay que hacerlo con css normal-->
+
+    <!--Clases responsive, hacen que cambie su tamagno en funcion del ancho del viewport, pensadas para que cada una tenga un tamagno (ocuparan todo el ancho disponible hasta x pixeles de viewport)-->
+    <div class="container">contenido</div>
+    <div class="container-lg">contenido2</div> <!--sm,md,lg,xl,xxl-->
+    <div class="container-fluid">contenido2</div> <!--Siempre todo el ancho-->
+
+    <!--Se permite un disegno de hasta 12 columnas, funciona similar a grid o a una tabla-->
+    <div class="container"> <!--table-->
+        <div class="row"> <!--tr-->
+            <div class="col">a</div> <!--td-->
+            <div class="col">b</div>
+            <div class="col">c</div> <!--Asi hasta 12-->
+        </div>
+        <div class="row"><div class="col">d</div><div class="col">e</div></div> <!--No hace falta que sea perfecta, ocuparan partes iguales-->
+        <div class="row"><div class="col-sm-2 col-lg-8">f</div><div class="col">g</div><div class="col">h</div></div> <!--Indica -<breakpoint media query>-<columnas (hasta 12, si no cabe desborda)>, en este caso cuando se este en sm ocupara 2 y cuando se este en lg ocupara 8-->
+        <div class="row"><div class="col-4">i</div><div class="col-4 order-5">j</div><div class="col-4 order-1">k</div></div> <!--order indica en que columna se pondra-->
+        <!--<div class="row"><div class="row"><div class="col">l</div><div class="col">m</div></div></div> row anidado-->
+        <div class="row"><div class="col-md-4">n</div><div class="col-md-4 offset-md-3">o</div></div> <!--Desplazar una celda, aveces incluso creando una nueva linea-->
+        <div class="row g-3"><div class="col gy-5">p</div><div class="col gx-2">q</div><div class="col">r</div></div> <!--El gutter es como el espaciado pero para este sistema de grid-->
+    </div>
+
+    <div class="d-none">oculto</div> <!--d-<valor> seria similar a display: <valor>-->
+    <div class="d-none d-lg-block">depende</div> <!--Oculto dependiendo del ancho del viewport, para responsive-->
+
+    <div class="p-3 mx-auto w-50 h-25 text-center">margen y tamagno</div> <!-- <m para pargin, p para padding><x/y t/l/b/r>-<tamagno de 0 a 5> --> <!-- <w ancho, h alto>-<%: 0,25,50,75,100,auto> -->    
+    <div class="container"><div class="row justify-content-center"><div class="col-12 col-md-6 text-center p-3">centro</div></div></div> <!--Ejemplo de div centrado responsive-->
+
+    <!--Mas propiedades, mirar la documentacion para ver todos los colores, tamagnos, etc-->
+    <p class="text-danger bg-info">hola</p> <!--Estableciendo algunos colores, estan ya definidos en bootstrap-->
+    <p class="border border-3 border-primary rounded">borde</p> <!--Estableciendo algunos bordes, usa el mismo formato de color-->
+    <p class="fw-bold fst-italic text-uppercase">estilo</p> <!--Estableciendo algunos estilos de letra-->
+    <div class="shadow">sombra</div>
+    <p class="font-monospace">fuente</p> <!--Bootstrap ya viene con algunas fuentes-->
+    <p class="display-6">tamagno</p> <!--Los tamagnos ya definidos en Bootstrap son: display-<1 al 6>, h<1 al 6>, lead, blockquote-->
+
+    <!--Usando flex en Bootstrap-->
+    <div class="w-100 d-flex flex-row justify-content-between align-items-start flex-shrink-1 gap-5"> 
+        <div>a</div><div>b</div><div>c</div><div>d</div><div>e</div><div>f</div>
+    </div>
+
+    <!--En general Bootstrap no esta pensado para disegnos complejos y especificos, sino para hacer disegnos simples y "prefabricados" rapidamente, sobre todo usando componentes como los de ejemplos2.html-->
+    <!--Aunque igualmente hay muchas mas clases que no salen en este archivo, no tendria sentido verlas todas, esto sirve para ver que formato usan y entender lo basico-->
+
+    <!--Incluir Bootstrap en una version concreta-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

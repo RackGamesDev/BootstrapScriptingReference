@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./extra.css" >
+</head>
+<body>
+    <!--Bootstrap esta mas pensado para poner elementos predefinidos, aqui hay algunos, hay muchos mas en la documentacion-->
+    <!--Muchos de estos ejemplos vienen de la web-->
+    
+    <!--Botones-->
+    <button type="button" class="btn btn-danger">boton</button> <!--Hay de varios colores-->
+    <a href="#" role="button" class="btn btn-info">otro</a>
+    <input type="button" class="btn btn-primary" value="otro mas">
+    <button type="button" class="btn btn-outline-warning">boton</button>
+    <div class="btn-group">
+        <button type="button" class="btn btn-secondary">1</button><button type="button" class="btn btn-secondary">2</button><button type="button" class="btn btn-secondary">3</button>
+        
+        <!--Dropdown-->
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">opciones</button> <!--Accionador-->
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> <!--Opciones, conviene darles eventos con js-->
+            <a class="dropdown-item" href="#">opcion 1</a>
+            <a class="dropdown-item" href="#">opcion 2</a>
+        </div>
+    </div>
+    <div class="btn-group-vertical">
+        <button type="button" class="btn btn-secondary">boton1</button><button type="button" class="btn btn-success">boton2</button>
+    </div>
+
+
+    <!--Tarjetas-->
+    <div class="card-group">
+        <div class="card w-25 m-4">
+            <img class="card-img-top w-100" src="./ejemplo.jpeg" alt="Card image cap" style="height: 128px;">
+            <div class="card-header">
+                <small>header</small>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">titulo</h5>
+                <h6 class="card-subtitle mb-2 text#muted">subtitulo</h6>
+                <p class="card-text">fahdsf hasdhf alskhdf aslj hdfasfd</p>
+                <a href="#" class="btn btn-primary">ir</a>
+                <a href="#" class="card-link">enlace</a>
+            </div>
+        </div>
+        <div class="card w-25">
+            <div class="card-body m-4">
+                <h5 class="card-title">titulo</h5>
+                <p class="card-text">fahdsf hasdhf alskhdf aslj hdfasfd</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--Carrusel-->
+    <div id="carouselExample" class="carousel slide w-50 mx-auto">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./ejemplo.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./ejemplo.jpeg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./ejemplo.jpeg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!--Collapse-->
+    <p class="d-inline-flex gap-1">
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">enlace href</a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">boton</button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">texto texto adosf hadofhaweuofhg iuagfkusd fasdhf a heof</div>
+    </div>
+
+
+    <!--Desplegable-->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+
+
+
+    <!--Hay muchos mas elementos, esto solo eran ejemplos, consultar la documentacion-->
+    <br><br><br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
